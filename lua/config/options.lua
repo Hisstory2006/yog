@@ -113,10 +113,10 @@ map("n", "<leader>s", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]], {
 -----------------------------------------------------------
 
 -- Paste in visual mode without overwriting clipboard
-map("x", "<leader>p", '"_dP', { desc = "Paste without overwriting clipboard", noremap = true, silent = true })
+map("x", "<leader>p", [["_dP]], { desc = "Paste without overwriting clipboard", noremap = true, silent = true })
 
 -- Delete without yanking (normal + visual)
-map({ "n", "v" }, "<leader>d", '"_d', { desc = "Delete without yanking", noremap = true, silent = true })
+map({ "n", "v" }, "<leader>d", [["_d]], { desc = "Delete without yanking", noremap = true, silent = true })
 
 -- Better paste in visual mode (do not clobber register)
 map("v", "p", '"_dP', { desc = "Better paste in visual mode", noremap = true, silent = true })
