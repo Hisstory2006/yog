@@ -175,6 +175,12 @@ return {
       words = { enabled = true },
     },
 
+    -- Notifications
+    vim.keymap.set("n", "<leader>nh", function()
+      require("snacks.notifier").show_history()
+    end, { desc = "Notification history" }),
+    
+    -- General Bindings
     keys = {
       { "<leader>lg", function() require("snacks").lazygit() end, desc = "Open Lazygit", },
       { "<leader>gl", function() require("snacks").lazygit.log() end, desc = "Open Lazygit Logs", },
