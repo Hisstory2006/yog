@@ -10,10 +10,10 @@ return {
     -- Keymaps inside the Oil window
     keymaps = {
       ["<C-c>"] = false,                     -- don't close with Ctrl-C
-      ["<C-h>"] = {                          
-        "actions.select",
-        opts = { horizontal = true },
-      },
+      ["<C-h>"] = false,
+      ["<C-l>"] = false, 
+      ["<C-r>"] = "actions.refresh", 
+      ["<C-s>"] = {"actions.select", opts = { horizontal = true },},
       ["q"] = "actions.close",               -- quit Oil with q
     },
 
@@ -37,7 +37,7 @@ return {
     vim.keymap.set("n", "<leader>-", oil.toggle_float, {
       desc = "Toggle floating Oil",
     })
-    
+
     vim.api.nvim_create_autocmd("FileType", {
       pattern = "oil",
       callback = function()

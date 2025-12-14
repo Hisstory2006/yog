@@ -22,6 +22,7 @@ require("lazy").setup({
   spec = {
     -- import plugins
     { import = "plugins" },
+    { import = "plugins.lsp" },
   },
   -- Configure other settings here
   -- colorscheme that will be used when installing plugins.

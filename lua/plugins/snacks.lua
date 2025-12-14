@@ -76,7 +76,7 @@ return {
               title_pos = "center",
               { win = "input", height = 1, border = "bottom" },
               { win = "list", border = "none" },
-              { wind = "preview", title = "{preview}", width = 0.6, height = 0.4, border = "top"},
+              { win = "preview", title = "{preview}", width = 0.6, height = 0.4, border = "top"},
             },
           },
           telescope = {

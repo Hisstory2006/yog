@@ -51,28 +51,17 @@ return {
     "echasnovski/mini.surround",
     event = { "BufReadPre", "BufNewFile" },
     opts = {
-      -- Add custom surroundings to be used on top of builtin ones. For more
-      -- information with examples, see `:h MiniSurround.config`.
       custom_surroundings = nil,
-
-      -- Duration (in ms) of highlight when calling `MiniSurround.highlight()`
       highlight_duration = 300,
-
-      -- Module mappings. Use `''` (empty string) to disable one.
-      -- INFO:
-      -- saiw surround with no whitespace
-      -- saw surround with whitespace
       mappings = {
-        add = 'sa',            -- Add surrounding in Normal and Visual modes
-        delete = 'ds',         -- Delete surrounding
-        find = 'sf',           -- Find surrounding (to the right)
-        find_left = 'sF',      -- Find surrounding (to the left)
-        highlight = 'sh',      -- Highlight surrounding
-        replace = 'sr',        -- Replace surrounding
-        update_n_lines = 'sn', -- Update `n_lines`
-
-        suffix_last = 'l',     -- Suffix to search with "prev" method
-        suffix_next = 'n',     -- Suffix to search with "next" method
+        add = "gsa",       -- recommended: avoid breakin plain `s`
+        delete = "gsd",
+        find = "gsf",
+        find_left = "gsF",
+        highlight = "gsh",
+        replace = "gsr",
+        suffix_last = "l",
+        suffix_next = "n",
       },
 
       -- Number of lines within which surrounding is searched
@@ -122,8 +111,8 @@ return {
       miniSplitJoin.setup({
         mappings = { toggle = "" }, -- Disable default mapping
       })
-      vim.keymap.set({ "n", "x" }, "sj", function() miniSplitJoin.join() end, { desc = "Join arguments" })
-      vim.keymap.set({ "n", "x" }, "sk", function() miniSplitJoin.split() end, { desc = "Split arguments" })
+      vim.keymap.set({ "n", "x" }, "<leader>sj", function() miniSplitJoin.join() end, { desc = "Join arguments" })
+      vim.keymap.set({ "n", "x" }, "<leader>sk", function() miniSplitJoin.split() end, { desc = "Split arguments" })
     end,
   },
 }
