@@ -22,8 +22,8 @@ return {
           },
         },
       },
-      explorer = { 
-        enabled = true, 
+      explorer = {
+        enabled = true,
         layout = {
           cycle = false,
         },
@@ -31,16 +31,16 @@ return {
       indent = {
         indent = {
           enabled = true,
-          char = "│",   
+          char = "│",
           hl = "SnacksIndent",
         },
         animate = {
-          enabled = false,   
+          enabled = false,
         },
         scope = {
           enabled = true,
           char = "│",
-          hl = "SnacksIndentScope", 
+          hl = "SnacksIndentScope",
         },
       },
       input = { enabled = true },
@@ -165,8 +165,8 @@ return {
         },
       },
       notifier = { enabled = true },
-      quickfile = { 
-        enabled = true, 
+      quickfile = {
+        enabled = true,
         exclude = {"latex"},
       },
       scope = { enabled = true, },
@@ -178,7 +178,7 @@ return {
     vim.keymap.set("n", "<leader>nh", function()
       require("snacks.notifier").show_history()
     end, { desc = "Notification history" }),
-    
+
     -- General Bindings
     keys = {
       { "<leader>lg", function() require("snacks").lazygit() end, desc = "Open Lazygit", },

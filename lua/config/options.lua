@@ -26,8 +26,8 @@ vim.opt.splitright   = true   -- vertical splits open to the right
 vim.opt.expandtab    = true   -- convert tabs to spaces
 vim.opt.autoindent   = true   -- auto indentation
 vim.opt.smartindent  = true  -- auto-indent using simple C-like rules
-vim.opt.tabstop      = 2      -- number of spaces per tab
-vim.opt.shiftwidth   = 2      -- number of spaces for indentation
+vim.opt.tabstop      = 4      -- number of spaces per tab
+vim.opt.shiftwidth   = 4      -- number of spaces for indentation
 
 -- SEARCH
 vim.opt.ignorecase   = true   -- case-insensitive search

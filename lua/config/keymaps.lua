@@ -1,6 +1,6 @@
 -- KEYMAPS: MOVEMENT & SEARCH
 
-local opts = { noremap = true, silent = true }
+local opts = { noremap = true, silent = true } -- not used
 local map = vim.keymap.set
 
 -- Move selected lines up/down in visual mode
