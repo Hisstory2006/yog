@@ -64,8 +64,8 @@ return {
 		local branch = { "branch", icon = { "", color = { fg = "#A6D4DE" } }, "|" }
 
 		lualine.setup({
-			icons_enabled = true,
 			options = {
+                icons_enabled = true,
 				theme = my_lualine_theme,
 				component_separators = { left = "|", right = "|" },
 				section_separators = { left = "|", right = "" },
