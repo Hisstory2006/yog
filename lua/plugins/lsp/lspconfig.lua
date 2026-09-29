@@ -1,5 +1,4 @@
-return {			icons_enabled = true,
-
+return {
 	"neovim/nvim-lspconfig",
 	event = { "BufReadPre", "BufNewFile" },
 	dependencies = {
@@ -42,6 +41,7 @@ return {			icons_enabled = true,
 
 		-- Enable servers (configs assumed elsewhere or default)
 		vim.lsp.enable("clangd") -- C/C++
+        vim.lsp.config("sourcekit", { filetypes = { "swift", "objc", "objcpp" } })
 		vim.lsp.enable("sourcekit") -- Swift (comes with Xcode, not Mason)
 		vim.lsp.enable("lua_ls") -- Lua (for editing this config)
 		vim.lsp.enable("ts_ls") -- TS + JS + TSX/JSX
